@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+header {
+  background: url("./images/desktop/image-header.jpg") no-repeat center;
+  background-size: cover;
+  padding-inline: 40px 48px;
+  padding-top: 34px;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 105px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 170px;
+}
+
+.nav-right-side {
+  display: flex;
+  gap: 47px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 47px;
+  list-style-type: none;
+  align-items: center;
+}
+
+.nav-list > li {
+  font-family: Barlow;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+
+  letter-spacing: -0.128571px;
+  color: white;
+  cursor: pointer;
+}
+
+.button {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+
+  letter-spacing: -0.107143px;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  color: #24303e;
+
+  padding: 1em 2em;
+
+  border-radius: 28px;
+  border: none;
+  outline: none;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 96.54px;
+}
+
+.header-content > h1 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 69px;
+
+  text-align: center;
+  letter-spacing: 8.75px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.header-content > img {
+  width: 30px;
+  height: 107.48px;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    gap: 88px;
+  }
+
+  .header-content {
+    gap: 52px;
+  }
+
+  .nav-right-side {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    background: url("./images/mobile/image-header.jpg") no-repeat center;
+    min-height: 538px;
+    padding-inline: 24px;
+    padding-top: 32px;
+    background-size: contain;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+picture > img {
+  display: block;
+  width: 100%;
+}
+
+main > div:nth-child(1) {
+  grid-column-start: 2;
+}
+
+main > div:nth-child(2) {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.content-left {
+  padding-left: 22.917%;
+  padding-right: 15.28%;
+}
+
+.content-right {
+  padding-right: 22.917%;
+  padding-left: 15.28%;
+}
+
+.content > h2 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: clamp(32px, 2.77778vw, 40px);
+  line-height: clamp(39px, 3.40278vw, 49px);
+  letter-spacing: -0.285714px;
+
+  color: #24303e;
+  margin-bottom: clamp(24px, 2.22222vw, 32px);
+}
+
+.content > p:first-of-type {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+
+  letter-spacing: -0.128571px;
+
+  color: #808397;
+  margin-bottom: clamp(32px, 2.77778vw, 40px);
+}
+
+.learnmore {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 25px;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #24303e;
+  position: relative;
+  cursor: pointer;
+}
+
+.learnmore::after {
+  content: "";
+  height: 10px;
+  width: 110%;
+  position: absolute;
+  bottom: 1px;
+  right: -5%;
+  border-radius: 28px;
+  z-index: -1;
+}
+
+.content-left > .learnmore::after {
+  background-color: rgba(250, 212, 0, 0.25);
+}
+
+.content-left > .learnmore:hover::after {
+  background-color: rgb(250, 212, 0);
+}
+
+.content-right > .learnmore::after {
+  background-color: rgba(254, 119, 102, 0.25);
+}
+
+.content-right > .learnmore:hover::after {
+  background-color: rgb(254, 119, 102);
+}
+
+main > div:nth-child(5),
+main > div:nth-child(6) {
+  position: relative;
+}
+
+.content-img {
+  position: absolute;
+  bottom: 59px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-inline: clamp(24px, 26.389%, 190px);
+
+  gap: 27px;
+  color: #24554a;
+}
+
+.content-img > h2 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 35px;
+  letter-spacing: -0.2px;
+}
+
+.content-img > p {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: -0.114286px;
+}
+
+.content-img:nth-child(2) {
+  color: #19536c;
+}
+
+@media (max-width: 1080px) {
+  .content-img {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  main > div:nth-child(1) {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  main > div:nth-child(2) {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .content,
+  .content-left,
+  .content-right {
+    padding-block: 4rem;
+    padding-inline: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  gap: 81px;
+  padding-block: 160px;
+  padding-inline: 165px;
+}
+
+.testimonials-section > h2 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 25px;
+
+  text-align: center;
+  letter-spacing: 5px;
+
+  color: #a7aaad;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials > img {
+  width: 72px;
+  border-radius: 100%;
+  margin-bottom: 58px;
+}
+
+.testimonials > blockquote {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+
+  text-align: center;
+  letter-spacing: -0.128571px;
+
+  color: #5b636d;
+
+  margin-bottom: 69px;
+}
+
+figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+figcaption > h4 {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.128571px;
+
+  color: #24303e;
+  margin-bottom: 9px;
+}
+
+figcaption > p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: -0.1px;
+
+  color: #a7aaad;
+}
+
+@media (max-width: 1024px) {
+  .testimonials-section {
+    gap: 64px;
+    padding-block: 64px 86px;
+  }
+
+  .testimonials-container {
+    flex-direction: column;
+    gap: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding-inline: 24px;
+  }
+
+  .testimonials {
+    gap: 32px;
+  }
+
+  .testimonials > img,
+  .testimonials > blockquote {
+    margin: 0;
+  }
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.image-container > picture > img {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 72px;
+
+  background: #90d4c6;
+}
+
+.footer-logo {
+  color: #2c7566;
+  margin-bottom: 40px;
+}
+
+.nav-footer {
+  margin-bottom: 88px;
+}
+
+.nav-footer > ul {
+  display: flex;
+  list-style-type: none;
+  gap: 57px;
+}
+
+.nav-footer > ul > li > a {
+  text-decoration: none;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+
+  letter-spacing: -0.128571px;
+
+  color: #458d7e;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  color: #2c7566;
+}
+
+.nav-footer > ul > li > a:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.icons > svg:hover {
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding-block: 64px 80px;
+  }
+}
