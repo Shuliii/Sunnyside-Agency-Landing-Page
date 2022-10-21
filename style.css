@@ -33,6 +33,7 @@ header {
 .nav-right-side {
   display: flex;
   gap: 47px;
+  z-index: 1;
 }
 
 .nav-list {
@@ -88,8 +89,8 @@ header {
 .header-content > h1 {
   font-family: "Fraunces";
   font-weight: 900;
-  font-size: 56px;
-  line-height: 69px;
+  font-size: clamp(40px, 3.889vw, 56px);
+  line-height: clamp(49px, 4.792vw, 69px);
 
   text-align: center;
   letter-spacing: 8.75px;
@@ -107,21 +108,67 @@ header {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 768px) {
   header {
+    padding-top: 32px;
     gap: 88px;
   }
 
   .header-content {
     gap: 52px;
+    width: 100%;
+  }
+
+  .navigation {
+    position: relative;
   }
 
   .nav-right-side {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    clip-path: polygon(0 7.2948%, 92.705% 7.2948%, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    margin-inline: auto;
+    position: absolute;
+    top: 56px;
+    gap: 32px;
+    padding-block: 63px 39px;
+  }
+
+  .visible {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    list-style-type: none;
+    align-items: center;
+  }
+
+  .nav-list > li {
+    color: #808397;
   }
 
   .hamburger {
     display: flex;
+  }
+
+  .button {
+    background-color: rgb(250, 212, 0);
+  }
+
+  .button:hover {
+    color: #24303e;
+    background-color: rgba(250, 212, 0, 0.25);
   }
 }
 
@@ -130,7 +177,6 @@ header {
     background: url("./images/mobile/image-header.jpg") no-repeat center;
     min-height: 538px;
     padding-inline: 24px;
-    padding-top: 32px;
     background-size: contain;
   }
 }
@@ -447,6 +493,7 @@ footer {
 .footer-logo {
   color: #2c7566;
   margin-bottom: 40px;
+  width: 170px;
 }
 
 .nav-footer {
